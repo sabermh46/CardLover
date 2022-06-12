@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+    color: white;
+}
+
+body {
+    background: rgb(113, 111, 150);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.card {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.card .heading {
+    text-align: center;
+    background: rgb(124, 55, 188);
+    padding: 15px;
+    font-weight: 500;
+    font-size: 120%;
+    border-radius: 10px 10px 4px 4px;
+}
+.card .card-item {
+    font-size: 20px;
+    border: 2px solid rgb(147, 77, 213);
+    background: rgba(124, 55, 188, 0.178);
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: 0.3s;
+    transform: translateY(40px);
+    opacity: 0;
+}
+.card .card-item:nth-last-child(1) {
+    border-radius: 4px 4px 10px 10px;
+}
+
+.card.arrived .card-item {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
